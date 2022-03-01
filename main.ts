@@ -43,6 +43,12 @@ basic.forever(function () {
                 b1.change(LedSpriteProperty.Y, -1)
             }
             radio.sendValue("b1x", b1.get(LedSpriteProperty.X))
+            b1.delete()
+            start_time = input.runningTime()
+            allowed_to_move = 1
+        }
+        if (rolled_number == 2) {
+            radio.sendString("launch b2")
         }
     }
 })
